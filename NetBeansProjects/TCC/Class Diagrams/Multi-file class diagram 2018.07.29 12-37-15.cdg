@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="JFNovoCurso" package="importxml" visibility="public" xPosition="17.0" yPosition="204.0">
+      <Fields>
+        <Field name="jTxt1" type="JTextField" visibility="package"/>
+        <Field name="jCbx1" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="jLB" type="JLabel" visibility="package"/>
+        <Field name="jButton" type="JButton" visibility="package"/>
+        <Field name="id" type="int" visibility="package"/>
+        <Field name="nomeCurso" type="String" visibility="package"/>
+        <Field name="jButtonSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBoxTipoCurso" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jMenuNovaDisiciplina" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuNovaMatriz" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuPesquisarDisciplina" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuPesquisarMatriz" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuPrincipal" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jTFNomeCurso" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTFVagas" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getVagas" returnType="String" visibility="public"/>
+        <Method name="setVagas" returnType="void" visibility="public">
+          <Argument type="String" name="vagas"/>
+        </Method>
+        <Method name="getNomeCurso" returnType="String" visibility="public"/>
+        <Method name="setNomeCurso" returnType="void" visibility="public">
+          <Argument type="String" name="nomeCurso"/>
+        </Method>
+        <Method name="getTipoCurso" returnType="String" visibility="public"/>
+        <Method name="setTipoCurso" returnType="void" visibility="public">
+          <Argument type="String" name="tipoCurso"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="jMenuPrincipalActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuNovaDisiciplinaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuPesquisarDisciplinaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuNovaMatrizActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuPesquisarMatrizActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonSalvarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="inOrUp" returnType="void" visibility="package"/>
+        <Method name="inserirDados" returnType="void" visibility="package"/>
+        <Method name="updateDados" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="JFPesquisarCurso" package="importxml" visibility="public" xPosition="542.0" yPosition="204.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="package"/>
+        <Field name="table" type="JTable" visibility="package"/>
+        <Field name="modelo" type="DefaultTableModel" visibility="package"/>
+        <Field name="atualizar" type="JButton" visibility="package"/>
+        <Field name="tipoCurso" type="String" visibility="package"/>
+        <Field name="nomeCurso" type="String" visibility="package"/>
+        <Field name="id" type="int" visibility="package"/>
+        <Field name="jButtonAlterarCurso" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonExcluirCurso" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonPesquisar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBoxTipoCurso" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jMenuNovaDisiciplina" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuNovaMatriz" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuPesquisarDisciplina" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuPesquisarMatriz" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuPrincipal" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jScrollPaneCursos" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getVagas" returnType="String" visibility="public"/>
+        <Method name="setVagas" returnType="void" visibility="public">
+          <Argument type="String" name="vagas"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getTipoCurso" returnType="String" visibility="public"/>
+        <Method name="setTipoCurso" returnType="void" visibility="public">
+          <Argument type="String" name="tipoCurso"/>
+        </Method>
+        <Method name="getNomeCurso" returnType="String" visibility="public"/>
+        <Method name="setNomeCurso" returnType="void" visibility="public">
+          <Argument type="String" name="nomeCurso"/>
+        </Method>
+        <Method name="jMenuPrincipalActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuNovaDisiciplinaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuPesquisarDisciplinaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuNovaMatrizActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuPesquisarMatrizActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonAlterarCursoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonExcluirCursoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonPesquisarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonAlterarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="popularJtable" returnType="void" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="alterarCurso" returnType="void" visibility="package"/>
+        <Method name="excluirCurso" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="ConnectionFactory" package="importxml" visibility="public" xPosition="414.0" yPosition="42.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Conexão" source="importxml.JFNovoCurso" target="importxml.ConnectionFactory" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Conexão" source="importxml.JFPesquisarCurso" target="importxml.ConnectionFactory" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="importxml.JFPesquisarCurso" target="importxml.JFNovoCurso" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

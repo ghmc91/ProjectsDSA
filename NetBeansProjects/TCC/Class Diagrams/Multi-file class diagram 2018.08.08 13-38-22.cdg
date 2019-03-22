@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="JFRelatorio" package="importxml" visibility="public" xPosition="44.0" yPosition="160.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="package"/>
+        <Field name="tipoCurso" type="String" visibility="package"/>
+        <Field name="idCurso" type="int" visibility="package"/>
+        <Field name="jCTP" type="JComboBox&lt;String&gt;" visibility="package"/>
+        <Field name="jButtonExibir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBoxAnoInicio" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBoxNomeCurso" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBoxTipoCurso" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBoxTipoRefeencia" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabelTipoCurso" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAnoInicio" returnType="String" visibility="public"/>
+        <Method name="setAnoInicio" returnType="void" visibility="public">
+          <Argument type="String" name="anoInicio"/>
+        </Method>
+        <Method name="getNomeCurso" returnType="String" visibility="public"/>
+        <Method name="setNomeCurso" returnType="void" visibility="public">
+          <Argument type="String" name="nomeCurso"/>
+        </Method>
+        <Method name="getTipoCurso" returnType="String" visibility="public"/>
+        <Method name="setTipoCurso" returnType="void" visibility="public">
+          <Argument type="String" name="tipoCurso"/>
+        </Method>
+        <Method name="getIdCurso" returnType="int" visibility="public"/>
+        <Method name="setIdCurso" returnType="void" visibility="public">
+          <Argument type="int" name="idCurso"/>
+        </Method>
+        <Method name="getTipoRef" returnType="int" visibility="public"/>
+        <Method name="setTipoRef" returnType="void" visibility="public">
+          <Argument type="int" name="tipoRef"/>
+        </Method>
+        <Method name="updateCombo" returnType="void" visibility="package"/>
+        <Method name="jButtonExibirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JFExibeRelatorio" package="importxml" visibility="public" xPosition="618.0" yPosition="160.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="package"/>
+        <Field name="idCurso" type="int" visibility="package"/>
+        <Field name="disciplina" type="List&lt;String&gt;" visibility="package"/>
+        <Field name="anoInicio" type="String" visibility="package"/>
+        <Field name="jScrollPaneRel" type="javax.swing.JScrollPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDisciplina" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="setDisciplina" returnType="void" visibility="public">
+          <Argument type="List&lt;String&gt;" name="disciplina"/>
+        </Method>
+        <Method name="getCodDisciplina" returnType="String" visibility="public"/>
+        <Method name="setCodDisciplina" returnType="void" visibility="public">
+          <Argument type="String" name="codDisciplina"/>
+        </Method>
+        <Method name="getAnoInicio" returnType="String" visibility="public"/>
+        <Method name="setAnoInicio" returnType="void" visibility="public">
+          <Argument type="String" name="anoInicio"/>
+        </Method>
+        <Method name="getIdCurso" returnType="int" visibility="public"/>
+        <Method name="setIdCurso" returnType="void" visibility="public">
+          <Argument type="int" name="idCurso"/>
+        </Method>
+        <Method name="getTipoReferencia" returnType="int" visibility="public"/>
+        <Method name="setTipoReferencia" returnType="void" visibility="public">
+          <Argument type="int" name="tipoReferencia"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="popularJtable" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="ConnectionFactory" package="importxml" visibility="public" xPosition="430.0" yPosition="12.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Conexão" source="importxml.JFRelatorio" target="importxml.ConnectionFactory" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Conexão" source="importxml.JFExibeRelatorio" target="importxml.ConnectionFactory" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Use" source="importxml.JFExibeRelatorio" target="importxml.JFRelatorio" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

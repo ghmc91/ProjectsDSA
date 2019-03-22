@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="FileTypeFilter" package="importxml" visibility="public" xPosition="660.0" yPosition="287.0">
+      <Fields>
+        <Field name="extensao" type="String" visibility="private" isFinal="true"/>
+        <Field name="descricao" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="extensao"/>
+          <Argument type="String" name="descricao"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="accept" returnType="boolean" visibility="public">
+          <Argument type="File" name="file"/>
+        </Method>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ConnectionFactory" package="importxml" visibility="public" xPosition="660.0" yPosition="25.0">
+      <Fields>
+        <Field name="con" type="Connection" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="JFrameMain" package="importxml" visibility="public" xPosition="34.0" yPosition="25.0">
+      <Fields>
+        <Field name="xmlFile" type="File" visibility="private"/>
+        <Field name="arquivoEscolhido" type="File" visibility="private"/>
+        <Field name="jButtonImportar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonProcurar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jMenPesquisarCurso" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItemRelatorio" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuNovaDisiciplina" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuNovaMatriz" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuNovoCurso" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuPesquisarDisciplina" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuPesquisarMatriz" type="javax.swing.JMenuItem" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="jButtonProcurarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonImportarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuNovoCursoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenPesquisarCursoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuNovaDisiciplinaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuPesquisarDisciplinaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuNovaMatrizActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuPesquisarMatrizActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItemRelatorioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="buscarJFileChooser" returnType="File" visibility="private"/>
+        <Method name="inserirDados" returnType="void" visibility="public">
+          <Argument type="File" name="arquivo"/>
+        </Method>
+        <Method name="getTextContent" returnType="String" visibility="private" isStatic="true">
+          <Argument type="Node" name="parentNode"/>
+          <Argument type="String" name="childName"/>
+        </Method>
+        <Method name="getCount" returnType="int" visibility="private" isStatic="true">
+          <Argument type="Node" name="parentNode"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Conexão" source="importxml.JFrameMain" target="importxml.ConnectionFactory" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="importxml.JFrameMain" target="importxml.FileTypeFilter"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
